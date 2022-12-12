@@ -1,4 +1,4 @@
-// create a new pokemon look at fruit 
+// create a new pokemon look at fruit file
 const React= require("react")
 
 class New extends React.Component {
@@ -6,10 +6,10 @@ class New extends React.Component {
         return(
             <div>
                 <h1>New Pokemon Page</h1>
-                <form action="/pkemon" method='POST'>
+                <form action="/pokemon" method='POST'>
                     Name : <input type='text' name='name'/>
                     <br />
-                    Image URL : <input type='text' name='img'/>
+                    {/* Image URL : <input type='text' name='img'/> */}
                     <br />
                     <input type='submit' name='' value='Create Pokemon' />
                 </form>
@@ -17,3 +17,5 @@ class New extends React.Component {
         )
     }
 }
+module.exports = New
+

@@ -6,19 +6,20 @@ const myStyle = {
   
 class Index extends React.Component {
   render () {
-  const{pokemonList} = this.props
-  console.log(this.props)
+  const{pokemon} = this.props
+  //console.log(this.props)
     return (
           <div style={myStyle}><h1>'See All The Pokemon!'</h1>
           <ul>
-            {pokemonList.map((pokemon, i) => {
+            {pokemon.map((pokemon, i) => {
               return( 
                 <li>
-                  <a href={`/pokemon/${i}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</a>
+                  <a href={`/pokemon/${pokemon.id}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</a>
                 </li>
               );
             })}
           </ul>
+          <a href="/pokemon/new">Create New Pokemon</a>
           </div>  
          );
         }
@@ -26,4 +27,5 @@ class Index extends React.Component {
      
     
   
-     module.exports  = Index;
+      module.exports  = Index;
+
